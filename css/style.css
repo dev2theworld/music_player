@@ -54,7 +54,7 @@ body {
 }
 
 .music-container.play .img-container img {
-  animation-play-state: running;
+  /* animation-play-state: running; */
 }
 
 @keyframes rotate {
@@ -90,4 +90,22 @@ body {
 
 .action-btn:focus {
   outline: 0;
+}
+
+.music-info {
+  background-color: lightgray;
+  border-radius: 15px 15px 0 0;
+  padding: 40px 10px 40px 200px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0%);
+  opacity: 0;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.music-container.play .music-info {
+  transform: translateY(-100%);
+  opacity: 1;
 }
