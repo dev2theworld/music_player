@@ -20,6 +20,7 @@ body {
   padding: 20px 30px;
   position: relative;
   margin: 200px 0;
+  border-radius: 0 0 15px 15px;
 }
 
 .img-container {
@@ -76,7 +77,7 @@ body {
 .action-btn {
   background-color: #fff;
   border: 0;
-  color: #dfdbdf;
+  color: gray;
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
@@ -84,7 +85,7 @@ body {
 }
 
 .action-btn-big {
-  color: #cdc2d0;
+  color: black;
   font-size: 30px;
 }
 
@@ -95,7 +96,7 @@ body {
 .music-info {
   background-color: lightgray;
   border-radius: 15px 15px 0 0;
-  padding: 40px 10px 40px 200px;
+  padding: 30px 10px 10px 200px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -108,4 +109,21 @@ body {
 .music-container.play .music-info {
   transform: translateY(-100%);
   opacity: 1;
+}
+
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 4px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.progress {
+  background-color: orange;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
 }
