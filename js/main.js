@@ -1,6 +1,6 @@
 const musicContainer = document.querySelector('.music-container');
 const playBtn = document.querySelector('#play');
-const precBtn = document.querySelector('#prev');
+const prevBtn = document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
 const audio = document.querySelector('#audio');
 const progress = document.querySelector('.progress');
@@ -40,6 +40,20 @@ function pauseSong() {
   audio.pause();
 }
 
+function prevSong() {
+
+  // Decreasing song number by one
+  songIndex--;
+
+  if(songIndex < 0) {
+    songIndex = songs.length - 1;
+  }
+
+  loadSong(songs[songIndex]);
+
+  playSong();
+}
+
 // Event listeners
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
@@ -50,3 +64,6 @@ playBtn.addEventListener('click', () => {
     playSong();
   }
 })
+
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
