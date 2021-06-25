@@ -12,7 +12,7 @@ const cover = document.querySelector('#cover');
 const songs = ['Boom Shaka-A-Lak', 'Duloc', 'Monsieur Hood'];
 
 // Keep track of song
-let songIndex = 2;
+let songIndex = 0;
 
 // Initially load song info DOM
 loadSong(songs[songIndex]);

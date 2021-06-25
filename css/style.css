@@ -44,12 +44,15 @@ h4 {
   
   
   /* transform: translateY(200px); */
-  opacity: 0;
-  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  
 }
 
-.music-container.play .music-info {
+.music-container.play img {
   /* transform: translateY(0%); */
+  opacity: 1;
+}
+
+.music-container.play .title-progress-container {
   opacity: 1;
 }
 
@@ -57,6 +60,9 @@ h4 {
 .img-container img {
   width: 200px;
   height: 200px;
+
+  opacity: 0;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .title-progress-container {
@@ -66,6 +72,9 @@ h4 {
   justify-content: center;
   margin-top: 50px;
   width: 200px;
+
+  opacity: 0;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .progress-container {
